@@ -1,2 +1,2 @@
 # ruyi
-A tool to create a template library as your wish
+A tool to create a template library as you wish
