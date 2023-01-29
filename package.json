@@ -2,7 +2,9 @@
   "name": "ruyibang",
   "version": "1.0.0",
   "description": "A tool to create a template library as you wish",
+  "type": "module",
   "scripts": {
+    "build": "pnpm --filter './packages/**/*' run build",
     "postinstall": "simple-git-hooks",
     "lint": "eslint --cache .",
     "format": "prettier --write --cache ."
@@ -42,5 +44,8 @@
     "packages/*/{src,types}/**/*.ts": [
       "eslint --cache --fix"
     ]
+  },
+  "dependencies": {
+    "lint-staged": "^13.1.0"
   }
 }
