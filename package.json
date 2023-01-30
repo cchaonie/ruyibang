@@ -2,9 +2,10 @@
   "name": "ruyibang",
   "version": "1.0.0",
   "description": "A tool to create a template library as you wish",
+  "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm --filter './packages/**/*' run build",
+    "build": "lerna run build",
     "postinstall": "simple-git-hooks",
     "lint": "eslint --cache .",
     "format": "prettier --write --cache ."
@@ -28,6 +29,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^8.33.0",
     "eslint-plugin-node": "^11.1.0",
+    "lerna": "^6.4.1",
     "prettier": "^2.8.3",
     "rimraf": "^4.1.2",
     "rollup": "^3.12.0",
@@ -47,5 +49,8 @@
   },
   "dependencies": {
     "lint-staged": "^13.1.0"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

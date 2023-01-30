@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "create-ruyibang": "./bin/index.mjs"
+  },
   "type": "module",
-  "devDependencies": {},
+  "devDependencies": {
+    "minimist": "^1.2.7",
+    "prompts": "^2.4.2"
+  },
   "scripts": {
     "build": "tsc"
   },
