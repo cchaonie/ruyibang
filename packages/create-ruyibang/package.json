@@ -1,7 +1,7 @@
 {
   "name": "create-ruyibang",
   "version": "1.0.0",
-  "description": "",
+  "description": "A tool to create a template library as you wish",
   "main": "index.js",
   "bin": {
     "create-ruyibang": "./bin/index.mjs"
@@ -12,7 +12,7 @@
     "prompts": "^2.4.2"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "rimraf ./lib && rollup -c rollup.config.js"
   },
   "repository": {
     "type": "git",

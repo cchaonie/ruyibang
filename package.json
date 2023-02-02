@@ -1,7 +1,7 @@
 {
   "name": "ruyibang",
   "version": "1.0.0",
-  "description": "A tool to create a template library as you wish",
+  "description": "A tool collection",
   "private": true,
   "type": "module",
   "scripts": {
@@ -33,7 +33,10 @@
     "prettier": "^2.8.3",
     "rimraf": "^4.1.2",
     "rollup": "^3.12.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-typescript2": "^0.34.1",
     "simple-git-hooks": "^2.8.1",
+    "tslib": "^2.5.0",
     "typescript": "^4.9.4"
   },
   "simple-git-hooks": {
