@@ -1,6 +1,7 @@
 import prompts from 'prompts';
 
 import { applicationTypes } from './constants.js';
+import { generate } from './generate.js';
 
 const getAppName = async () =>
   await prompts({
@@ -17,11 +18,9 @@ const selectAppType = async () =>
     choices: applicationTypes,
   });
 
-const run = async () => {
+export const run = async () => {
   const { appName } = await getAppName();
   const { appType } = await selectAppType();
 
-  console.log(appName, appType);
+  generate(appName, appType);
 };
-
-export default run;

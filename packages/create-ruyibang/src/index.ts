@@ -1,3 +1,1 @@
-export function helloWorld() {
-  console.log('hello world');
-}
+export { run as default } from './cli.js';

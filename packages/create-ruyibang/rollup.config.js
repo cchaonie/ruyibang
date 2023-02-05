@@ -4,7 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 
 export default [
   {
-    input: './src/cli.ts',
+    input: './src/index.ts',
     output: {
       dir: './lib',
       format: 'es',

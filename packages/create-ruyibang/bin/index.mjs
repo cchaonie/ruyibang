@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import run from '../lib/cli.js';
+import run from '../lib/index.js';
 
 try {
   run();

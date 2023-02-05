@@ -1,5 +1,8 @@
 import require$$0 from 'readline';
 import require$$2 from 'events';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 var prompts$2 = {};
 
@@ -7182,24 +7185,60 @@ function isNodeLT(tar) {
 
 var prompts = isNodeLT('8.6.0') ? requireDist() : requireLib();
 
+var AppType;
+(function (AppType) {
+  AppType[(AppType['TaroMiniApp'] = 0)] = 'TaroMiniApp';
+  AppType[(AppType['ReactSPA'] = 1)] = 'ReactSPA';
+  AppType[(AppType['ReactSSR'] = 2)] = 'ReactSSR';
+  AppType[(AppType['NodeAPI'] = 3)] = 'NodeAPI';
+  AppType[(AppType['NodeLib'] = 4)] = 'NodeLib';
+})((AppType = AppType || (AppType = {})));
 const applicationTypes = [
   {
     title: 'taro-mini-app',
     description: 'A starter mini app created by taro',
+    value: AppType.TaroMiniApp,
   },
   {
     title: 'react-spa',
     description: 'A starter react SPA',
+    value: AppType.ReactSPA,
   },
   {
     title: 'react-ssr',
     description: 'A starter react ssr app',
+    value: AppType.ReactSSR,
   },
   {
     title: 'node-api',
     description: 'An API server created with node.js',
+    value: AppType.NodeAPI,
+  },
+  {
+    title: 'node-lib',
+    description: 'A node library',
+    value: AppType.NodeLib,
   },
 ];
+
+const cwd = process.cwd();
+const libDir = fileURLToPath(import.meta.url);
+const templatesDirectory = path.resolve(libDir, '../..', 'templates');
+// 1. check if the directory exist, if not, create it
+// 2. get the template
+// 3. copy the template to the appName directory
+const generate = (appName, appType) => {
+  const targetDir = path.join(cwd, appName);
+  const { title } = applicationTypes[appType];
+  const templateName = `template-${title}-starter`;
+  if (fs.existsSync(targetDir)) {
+    throw Error(`Target directory ${targetDir} exists!`);
+  }
+  fs.mkdirSync(targetDir);
+  fs.cpSync(path.join(templatesDirectory, templateName), targetDir, {
+    recursive: true,
+  });
+};
 
 const getAppName = async () =>
   await prompts({
@@ -7217,7 +7256,7 @@ const selectAppType = async () =>
 const run = async () => {
   const { appName } = await getAppName();
   const { appType } = await selectAppType();
-  console.log(appName, appType);
+  generate(appName, appType);
 };
 
 export { run as default };
