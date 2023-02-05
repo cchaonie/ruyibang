@@ -1,12 +1,59 @@
 {
   "name": "template-react-ssr-starter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "A template for react ssr application",
+  "main": "lib/index.js",
+  "bin": "./bin/cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf ./dist && cross-env NODE_ENV=production rollup -c",
+    "build:dev": "rimraf ./dist && cross-env NODE_ENV=development rollup -c",
+    "start": "node dist/index.js",
+    "dev": "node dist/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "files": [
+    "bin",
+    "dist",
+    "lib",
+    "public"
+  ],
+  "keywords": [
+    "template",
+    "react",
+    "ssr",
+    "starter"
+  ],
+  "author": "cchaonie",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "tslib": "^2.4.0",
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-html": "^0.2.4",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.7.14",
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.78.1",
+    "cross-env": "^7.0.3",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2"
+  }
 }
