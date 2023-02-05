@@ -14,7 +14,6 @@
   "type": "module",
   "devDependencies": {
     "@types/prompts": "^2.4.2",
-    "minimist": "^1.2.7",
     "prompts": "^2.4.2"
   },
   "scripts": {

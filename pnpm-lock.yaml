@@ -48,14 +48,10 @@ importers:
   packages/create-ruyibang:
     specifiers:
       '@types/prompts': ^2.4.2
-      minimist: ^1.2.7
       prompts: ^2.4.2
-      tslib: ^2.5.0
     devDependencies:
       '@types/prompts': 2.4.2
-      minimist: 1.2.7
       prompts: 2.4.2
-      tslib: 2.5.0
 
 packages:
 
