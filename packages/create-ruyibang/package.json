@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "A tool to create a template library as you wish",
   "main": "index.js",
+  "files": [
+    "bin",
+    "lib",
+    "templates"
+  ],
   "bin": {
     "create-ruyibang": "./bin/index.mjs"
   },
@@ -10,8 +15,7 @@
   "devDependencies": {
     "@types/prompts": "^2.4.2",
     "minimist": "^1.2.7",
-    "prompts": "^2.4.2",
-    "tslib": "^2.5.0"
+    "prompts": "^2.4.2"
   },
   "scripts": {
     "build": "rimraf ./lib && rollup -c rollup.config.js"

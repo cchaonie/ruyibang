@@ -1,5 +1,6 @@
 import prompts from 'prompts';
-import { applicationTypes } from './constants';
+
+import { applicationTypes } from './constants.js';
 
 const getAppName = async () =>
   await prompts({
@@ -22,3 +23,5 @@ const run = async () => {
 
   console.log(appName, appType);
 };
+
+export default run;
