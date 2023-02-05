@@ -41,11 +41,15 @@ importers:
 
   packages/create-ruyibang:
     specifiers:
+      '@types/prompts': ^2.4.2
       minimist: ^1.2.7
       prompts: ^2.4.2
+      tslib: ^2.5.0
     devDependencies:
+      '@types/prompts': 2.4.2
       minimist: 1.2.7
       prompts: 2.4.2
+      tslib: 2.5.0
 
 packages:
 
@@ -1222,6 +1226,13 @@ packages:
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
+    dev: true
+
+  /@types/prompts/2.4.2:
+    resolution: {integrity: sha512-TwNx7qsjvRIUv/BCx583tqF5IINEVjCNqg9ofKHRlSoUHE62WBHrem4B1HGXcIrG511v29d1kJ9a/t2Esz7MIg==}
+    dependencies:
+      '@types/node': 18.11.18
+      kleur: 3.0.3
     dev: true
 
   /@types/semver/7.3.13:
