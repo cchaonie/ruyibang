@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# There will only be auto generated files
+lib
