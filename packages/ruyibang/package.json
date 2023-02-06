@@ -1,0 +1,16 @@
+{
+  "name": "ruyibang",
+  "version": "1.0.0",
+  "description": "A build tool",
+  "bin": {
+    "ruyibang": "bin/index.mjs"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "cchaonie",
+  "license": "MIT"
+}
