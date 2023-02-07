@@ -1,0 +1,15 @@
+.app {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.app h1 {
+  text-align: center;
+}
+
+.content {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
