@@ -1,7 +1,7 @@
 {
-  "name": "node-api",
+  "name": "template-node-api-starter",
   "version": "1.0.0",
-  "description": "A node api",
+  "description": "A node api starter",
   "main": "lib/index.js",
   "type": "module",
   "scripts": {
