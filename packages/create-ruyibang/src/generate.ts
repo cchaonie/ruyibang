@@ -27,4 +27,5 @@ export const generate = (appName: string, appType: AppType) => {
   fs.cpSync(path.join(templatesDirectory, templateName), targetDir, {
     recursive: true,
   });
+  console.log('Generation is successful ~^_^~');
 };
