@@ -7,21 +7,21 @@ export enum AppType {
 }
 
 export const applicationTypes = [
-  {
-    title: 'taro-mini-app',
-    description: 'A starter mini app created by taro',
-    value: AppType.TaroMiniApp,
-  },
+  // {
+  //   title: 'taro-mini-app',
+  //   description: 'A starter mini app created by taro',
+  //   value: AppType.TaroMiniApp,
+  // },
   {
     title: 'react-spa',
     description: 'A starter react SPA',
     value: AppType.ReactSPA,
   },
-  {
-    title: 'react-ssr',
-    description: 'A starter react ssr app',
-    value: AppType.ReactSSR,
-  },
+  // {
+  //   title: 'react-ssr',
+  //   description: 'A starter react ssr app',
+  //   value: AppType.ReactSSR,
+  // },
   {
     title: 'node-api',
     description: 'An API server created with node.js',

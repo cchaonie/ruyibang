@@ -1,6 +1,6 @@
 {
   "name": "create-ruyibang",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "A tool to create a template library as you wish",
   "main": "index.js",
   "files": [

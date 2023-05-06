@@ -4,15 +4,14 @@ import { fileURLToPath } from 'node:url';
 
 import { AppType, applicationTypes } from './constants.js';
 
-const cwd = process.cwd();
-const libDir = fileURLToPath(import.meta.url);
-
-const templatesDirectory = path.resolve(libDir, '../..', 'templates');
-
 // 1. check if the directory exist, if not, create it
 // 2. get the template
 // 3. copy the template to the appName directory
 export const generate = (appName: string, appType: AppType) => {
+  const cwd = process.cwd();
+  const libDir = fileURLToPath(import.meta.url);
+
+  const templatesDirectory = path.resolve(libDir, '../..', 'templates');
   const targetDir = path.join(cwd, appName);
 
   const { title } = applicationTypes[appType];
