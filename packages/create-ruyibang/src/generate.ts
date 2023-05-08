@@ -14,17 +14,23 @@ export const generate = (appName: string, appType: AppType) => {
   const templatesDirectory = path.resolve(libDir, '../..', 'templates');
   const targetDir = path.join(cwd, appName);
 
-  const { title } = applicationTypes[appType];
-  const templateName = `template-${title}-starter`;
+  const applicationType = applicationTypes.find(
+    (applicationType) => applicationType.value === appType,
+  );
+  if (applicationType) {
+    const { title } = applicationType;
+    const templateName = `template-${title}-starter`;
 
-  if (fs.existsSync(targetDir)) {
-    throw Error(`Target directory ${targetDir} exists!`);
+    if (fs.existsSync(targetDir)) {
+      throw Error(`Target directory ${targetDir} exists!`);
+    }
+
+    fs.mkdirSync(targetDir);
+
+    fs.cpSync(path.join(templatesDirectory, templateName), targetDir, {
+      recursive: true,
+    });
+    console.log('Generation is successful ~^_^~');
   }
-
-  fs.mkdirSync(targetDir);
-
-  fs.cpSync(path.join(templatesDirectory, templateName), targetDir, {
-    recursive: true,
-  });
-  console.log('Generation is successful ~^_^~');
+  throw Error(`Application type ${applicationType} does not exist.`);
 };
