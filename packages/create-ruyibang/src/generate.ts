@@ -31,6 +31,7 @@ export const generate = (appName: string, appType: AppType) => {
       recursive: true,
     });
     console.log('Generation is successful ~^_^~');
+  } else {
+    throw Error(`The application type does not exist.`);
   }
-  throw Error(`Application type ${applicationType} does not exist.`);
 };
