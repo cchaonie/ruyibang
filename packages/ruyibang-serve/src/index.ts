@@ -1,5 +1,4 @@
 import express from 'express';
-
 import { Options } from './types';
 
 const getDefaultOptions = () => ({
