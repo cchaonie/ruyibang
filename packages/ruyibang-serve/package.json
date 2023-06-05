@@ -1,7 +1,7 @@
 {
-  "name": "template-node-lib-starter",
+  "name": "ruyibang-serve",
   "version": "1.0.0",
-  "description": "A node lib starter",
+  "description": "A node static server",
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "scripts": {
