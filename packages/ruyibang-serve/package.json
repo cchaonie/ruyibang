@@ -4,6 +4,7 @@
   "description": "A node static server",
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
+  "bin": "./lib/cli.mjs",
   "scripts": {
     "build": "rimraf lib && rollup --config rollup.config.ts --configPlugin typescript"
   },
@@ -15,23 +16,24 @@
   "author": "cchaonie",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.8",
-    "@rollup/plugin-commonjs": "^24.0.0",
+    "@babel/core": "^7.22.1",
+    "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
-    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-typescript": "^11.1.1",
     "@types/express": "^4.17.17",
-    "@types/node": "^18.7.18",
-    "@typescript-eslint/eslint-plugin": "^5.48.0",
-    "@typescript-eslint/parser": "^5.48.0",
-    "eslint": "^8.29.0",
-    "eslint-config-prettier": "^8.5.0",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.1.0",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.16.16",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "prettier": "2.8.1",
     "rimraf": "^3.0.2",
-    "rollup": "^3.10.0",
-    "tslib": "^2.4.1",
-    "typescript": "^4.8.3"
+    "rollup": "^3.23.1",
+    "tslib": "^2.5.3",
+    "typescript": "^4.9.5"
   },
   "lint-staged": {
     "*.{ts, js}": [
@@ -41,6 +43,7 @@
     "*.{json,md,yaml,yml}": "prettier --write"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "minimist": "^1.2.8"
   }
 }
