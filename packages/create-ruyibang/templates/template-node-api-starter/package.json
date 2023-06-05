@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A node api starter",
   "main": "lib/index.js",
+  "private": true,
   "type": "module",
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development tsc --watch",
