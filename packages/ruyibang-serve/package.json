@@ -4,7 +4,7 @@
   "description": "A node static server",
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
-  "bin": "./lib/cli.mjs",
+  "bin": "./bin/index.mjs",
   "scripts": {
     "build": "rimraf lib && rollup --config rollup.config.ts --configPlugin typescript"
   },

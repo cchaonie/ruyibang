@@ -1,4 +1,5 @@
 import express from 'express';
+import { Express } from 'express';
 import { Options } from './types';
 
 const getDefaultOptions = () => ({
@@ -6,7 +7,7 @@ const getDefaultOptions = () => ({
   dir: process.cwd(),
 });
 
-export default function createServer(options: Options = {}) {
+export default function createServer(options: Options = {}): Express {
   const { port, dir } = {
     ...getDefaultOptions(),
     ...options,

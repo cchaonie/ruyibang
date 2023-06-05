@@ -1,4 +1,5 @@
 import minimist from 'minimist';
+
 import createServer from '.';
 import { Options } from './types';
 
