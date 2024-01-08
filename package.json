@@ -33,6 +33,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-node": "^11.1.0",
     "lerna": "^6.6.2",
+    "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "rimraf": "^4.4.1",
     "rollup": "^3.23.0",
@@ -40,8 +41,7 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "simple-git-hooks": "^2.8.1",
     "tslib": "^2.5.3",
-    "typescript": "^4.9.5",
-    "lint-staged": "^13.2.2"
+    "typescript": "^4.9.5"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged --concurrent false"
@@ -54,7 +54,9 @@
       "eslint --cache --fix"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "create-ruyibang": "workspace:^"
+  },
   "workspaces": [
     "packages/*"
   ]

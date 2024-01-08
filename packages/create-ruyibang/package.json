@@ -12,9 +12,12 @@
     "create-ruyibang": "./bin/index.mjs"
   },
   "type": "module",
-  "devDependencies": {
-    "@types/prompts": "^2.4.2",
+  "dependencies": {
     "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.16",
+    "@types/prompts": "^2.4.2"
   },
   "scripts": {
     "build": "rimraf ./lib && rollup -c rollup.config.js"
