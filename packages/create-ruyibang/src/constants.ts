@@ -23,11 +23,6 @@ export const applicationTypes = [
     value: AppType.NodeLib,
   },
   // {
-  //   title: 'taro-mini-app',
-  //   description: 'A starter mini app created by taro',
-  //   value: AppType.TaroMiniApp,
-  // },
-  // {
   //   title: 'react-ssr',
   //   description: 'A starter react ssr app',
   //   value: AppType.ReactSSR,
