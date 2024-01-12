@@ -12,7 +12,11 @@
     "build": "rimraf lib && tsc",
     "start": "cross-env NODE_ENV=production node lib/index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "API",
+    "node",
+    "server"
+  ],
   "author": "cchaonie",
   "license": "MIT",
   "dependencies": {
