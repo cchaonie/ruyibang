@@ -1,7 +1,7 @@
 import express from 'express';
 
-import { loadEnv } from './configs/index.js';
-import controller from './controller/index.js';
+import { loadEnv } from './config/index.js';
+import controller from './controllers/index.js';
 
 const config = loadEnv();
 
