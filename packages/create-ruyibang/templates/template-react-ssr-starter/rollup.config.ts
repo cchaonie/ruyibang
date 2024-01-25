@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import replace from '@rollup/plugin-replace';
 import json from '@rollup/plugin-json';
+import bundleManifest from 'rollup-plugin-bundle-manifest';
 
 const isPrd = process.env.NODE_ENV === 'production';
 
@@ -17,6 +18,7 @@ const plugins = [
       isPrd ? 'production' : 'development',
     ),
   }),
+  bundleManifest(),
 ];
 
 export default [
