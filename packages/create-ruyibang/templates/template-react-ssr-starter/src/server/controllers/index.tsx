@@ -10,21 +10,21 @@ export default async function (req: Request, res: Response) {
   try {
     const manifestFilePath = path.resolve(
       process.cwd(),
-      'dist/client/manifest.json',
+      'dist/client/bundle-manifest.json',
     );
 
     const chunkMap = await fs.readFile(manifestFilePath, { encoding: 'utf-8' });
 
-    const scripts = Object.values(JSON.parse(chunkMap)).map(
-      (src: string, i) => {
-        if (src.endsWith('js')) {
-          return <script key={`${i + 1}`} defer src={src} />;
-        }
-        if (src.endsWith('css')) {
-          return <link key={`${i + 1}`} href={src} />;
-        }
-      },
-    );
+    const manifest = JSON.parse(chunkMap);
+
+    const scripts = Object.keys(manifest).map((filename: string, i) => {
+      if (filename.endsWith('js') && manifest[filename].isEntry) {
+        return <script key={`${i + 1}`} defer src={filename} />;
+      }
+      if (filename.endsWith('css')) {
+        return <link key={`${i + 1}`} href={filename} />;
+      }
+    });
 
     const html = ReactDOMServer.renderToPipeableStream(
       <ServerHTML
