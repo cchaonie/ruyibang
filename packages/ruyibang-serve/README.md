@@ -13,3 +13,9 @@ npm i -g ruyibang-serve
 ```bash
 ruyibang-serve --port 8080 --dir './public'
 ```
+
+Or you can use `npx`
+
+```bash
+npx ruyibang-serve --port 8080
+```
