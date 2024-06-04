@@ -1,6 +1,6 @@
 {
   "name": "ruyibang-serve",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A node static server",
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",

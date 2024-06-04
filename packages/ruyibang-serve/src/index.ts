@@ -3,16 +3,8 @@ import express, { Express } from 'express';
 
 import { Options } from './types';
 
-const getDefaultOptions = () => ({
-  port: 6061,
-  dir: process.cwd(),
-});
-
-export default function createServer(options: Options = {}): Express {
-  const { port, dir } = {
-    ...getDefaultOptions(),
-    ...options,
-  };
+export default function createServer(options: Options): Express {
+  const { port = 6061, dir = process.cwd() } = options;
 
   const staticDir = path.resolve(process.cwd(), dir);
 
@@ -20,7 +12,7 @@ export default function createServer(options: Options = {}): Express {
 
   app.use((req, _, next) => {
     console.log(
-      `[IncomingRequest]: URL -> ${req.url}, Method -> ${req.method}`
+      `[IncomingRequest]: URL -> ${req.url}, Method -> ${req.method}.`
     );
     next();
   });
@@ -28,7 +20,9 @@ export default function createServer(options: Options = {}): Express {
   app.use(express.static(staticDir));
 
   app.listen(port, () => {
-    console.log(`Server is running on port ${port} in dir ${staticDir}`);
+    console.log(
+      `Server is running on port ${port}.\nFiles in directory ${staticDir} are served now.`
+    );
   });
 
   return app;
