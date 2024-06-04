@@ -1,5 +1,6 @@
-import express from 'express';
-import { Express } from 'express';
+import path from 'node:path';
+import express, { Express } from 'express';
+
 import { Options } from './types';
 
 const getDefaultOptions = () => ({
@@ -13,12 +14,21 @@ export default function createServer(options: Options = {}): Express {
     ...options,
   };
 
+  const staticDir = path.resolve(process.cwd(), dir);
+
   const app = express();
 
-  app.use(express.static(dir));
+  app.use((req, _, next) => {
+    console.log(
+      `[IncomingRequest]: URL -> ${req.url}, Method -> ${req.method}`
+    );
+    next();
+  });
+
+  app.use(express.static(staticDir));
 
   app.listen(port, () => {
-    console.log(`Server is running on port ${port} in dir ${dir}`);
+    console.log(`Server is running on port ${port} in dir ${staticDir}`);
   });
 
   return app;
