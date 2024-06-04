@@ -5,6 +5,9 @@
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "bin": "./bin/index.mjs",
+  "engines": {
+    "node": ">=15.3.0"
+  },
   "scripts": {
     "build": "rimraf lib && rollup --config rollup.config.ts --configPlugin typescript"
   },
