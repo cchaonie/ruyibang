@@ -1,6 +1,6 @@
 {
   "name": "ruyibang-serve",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A node static server",
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
@@ -9,8 +9,13 @@
     "node": ">=15.3.0"
   },
   "scripts": {
-    "build": "rimraf lib && rollup --config rollup.config.ts --configPlugin typescript"
+    "build": "rimraf lib && rollup --config rollup.config.ts --configPlugin typescript",
+    "prepublish": "npm run build"
   },
+  "files": [
+    "lib",
+    "bin"
+  ],
   "keywords": [
     "node",
     "library",

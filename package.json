@@ -20,7 +20,6 @@
     "url": "https://github.com/cchaonie/ruyibang/issues"
   },
   "homepage": "https://github.com/cchaonie/ruyibang#readme",
-  "packageManager": "pnpm@7.9.0",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
