@@ -12,19 +12,25 @@ export default class UserController implements IUserController {
 
   constructor(@inject(TYPES.userService) userService: IUserService) {
     this.router.get('/', this.getUser);
+    this.router.post('/create', this.createUser);
     this.userService = userService;
   }
 
-  async getUser(req: Request, res: Response) {
+  getUser = async (req: Request, res: Response) => {
     res.send('Hello World');
-  }
+  };
 
-  async createUser(req: Request, res: Response) {
+  createUser = async (req: Request, res: Response) => {
     try {
-      await this.userService.createUser(req.body.username, req.body.password);
+      await this.userService.createUser(
+        req.body.username,
+        req.body.password,
+        req.body.email,
+      );
       res.send('User created');
     } catch (error) {
+      console.log(error);
       res.status(400).send('Error');
     }
-  }
+  };
 }
