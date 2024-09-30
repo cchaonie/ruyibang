@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt';
 import 'reflect-metadata';
 import { IUserService } from './UserService.interface.js';
 import pool from '../db/index.js';
+import { QueryResult } from 'mysql2/promise';
 
 @injectable()
 export default class UserService implements IUserService {
@@ -18,5 +19,13 @@ export default class UserService implements IUserService {
 
     await pool.execute(query, [username, passwordHash, email]);
     return Promise.resolve();
+  }
+
+  async getUserByUsername(username: string): Promise<any> {
+    const query = 'SELECT * FROM users WHERE username = ?';
+
+    const [rows] = await pool.execute(query, [username]);
+
+    return rows;
   }
 }

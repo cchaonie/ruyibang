@@ -4,4 +4,6 @@ export interface IUserService {
     password: string,
     email: string,
   ) => Promise<void>;
+
+  getUserByUsername: (username: string) => Promise<any>;
 }
