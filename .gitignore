@@ -105,3 +105,5 @@ dist
 
 # There will only be auto generated files
 lib
+
+.DS_Store

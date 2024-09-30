@@ -22,22 +22,22 @@
   "homepage": "https://github.com/cchaonie/ruyibang#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.1.0",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.5",
-    "@types/node": "^18.19.5",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^18.19.54",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.1",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-node": "^11.1.0",
     "lint-staged": "^13.3.0",
     "prettier": "^2.8.8",
     "rimraf": "^4.4.1",
-    "rollup": "^3.29.4",
+    "rollup": "^3.29.5",
     "rollup-plugin-typescript2": "^0.34.1",
-    "simple-git-hooks": "^2.9.0",
-    "tslib": "^2.6.2",
+    "simple-git-hooks": "^2.11.1",
+    "tslib": "^2.7.0",
     "typescript": "^4.9.5"
   },
   "simple-git-hooks": {
@@ -54,7 +54,17 @@
   "dependencies": {
     "create-ruyibang": "workspace:^"
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "pnpm": {
+    "overrides": {
+      "express@<4.19.2": ">=4.19.2",
+      "braces@<3.0.3": ">=3.0.3",
+      "micromatch@<4.0.8": ">=4.0.8",
+      "body-parser@<1.20.3": ">=1.20.3",
+      "send@<0.19.0": ">=0.19.0",
+      "serve-static@<1.16.0": ">=1.16.0",
+      "express@<4.20.0": ">=4.20.0",
+      "path-to-regexp@<0.1.10": ">=0.1.10",
+      "rollup@>=3.0.0 <3.29.5": ">=3.29.5"
+    }
+  }
 }
