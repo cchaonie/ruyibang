@@ -22,9 +22,9 @@ export const applicationTypes = [
     description: 'A node library',
     value: AppType.NodeLib,
   },
-  // {
-  //   title: 'react-ssr',
-  //   description: 'A starter react ssr app',
-  //   value: AppType.ReactSSR,
-  // },
+  {
+    title: 'react-ssr',
+    description: 'A starter react ssr app',
+    value: AppType.ReactSSR,
+  },
 ];

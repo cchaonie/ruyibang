@@ -1,12 +1,10 @@
 import express from 'express';
 
-import { loadEnv } from './config/index.js';
 import controller from './controllers/index.js';
-
-const config = loadEnv();
+import './config/index.js';
 
 const app = express();
-const port = config?.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/hello', (req, res) => {
   res.send('Hello World!');

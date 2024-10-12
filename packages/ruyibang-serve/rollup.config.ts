@@ -3,7 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 
 const shared = {
   plugins: [commonjs(), typescript()],
-  external: ['express', 'minimist'],
+  external: ['express', 'minimist', 'node:path'],
 };
 
 export default [
