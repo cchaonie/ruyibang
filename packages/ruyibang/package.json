@@ -5,6 +5,7 @@
   "bin": {
     "ruyibang": "bin/index.mjs"
   },
+  "private": true,
   "main": "lib/index.js",
   "scripts": {
     "dev": "",
