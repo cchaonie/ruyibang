@@ -1,9 +1,10 @@
 export enum AppType {
+  TaroMiniApp = 0,
   ReactSPA = 1,
+  ReactSSR = 2,
   NodeAPI = 3,
   NodeLib = 4,
-  TaroMiniApp = 0,
-  ReactSSR = 2,
+  ChromeExtension = 5,
 }
 
 export const applicationTypes = [
@@ -26,5 +27,10 @@ export const applicationTypes = [
     title: 'react-ssr',
     description: 'A starter react ssr app',
     value: AppType.ReactSSR,
+  },
+  {
+    title: 'chrome-extension',
+    description: 'A starter chrome extension',
+    value: AppType.ChromeExtension,
   },
 ];
