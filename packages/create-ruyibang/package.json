@@ -1,6 +1,6 @@
 {
   "name": "create-ruyibang",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A tool to create a template library as you wish",
   "engines": {
     "node": ">=15.3.0"

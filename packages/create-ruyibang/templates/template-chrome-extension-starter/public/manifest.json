@@ -1,6 +1,6 @@
 {
-  "name": "fast-reviewer",
-  "description": "Help us to review better",
+  "name": "Hello Chrome Extension",
+  "description": "This is a simple Chrome Extension starter",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
