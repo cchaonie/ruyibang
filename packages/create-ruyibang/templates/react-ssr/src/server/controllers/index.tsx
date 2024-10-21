@@ -1,7 +1,7 @@
 import ReactDOMServer from 'react-dom/server';
 import { Request, Response } from 'express';
 
-import App from '../../application';
+import App from '../..';
 import { ServerHTML } from './serverHTML';
 import path from 'path';
 import fs from 'fs/promises';
