@@ -19,7 +19,7 @@ export const generate = (appName: string, appType: AppType) => {
   );
   if (applicationType) {
     const { title } = applicationType;
-    const templateName = `template-${title}-starter`;
+    const templateName = `${title}`;
 
     if (fs.existsSync(targetDir)) {
       throw Error(`Target directory ${targetDir} exists!`);

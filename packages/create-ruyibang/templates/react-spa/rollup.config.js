@@ -15,7 +15,7 @@ const plugins = [
   replace({
     preventAssignment: true,
     'process.env.NODE_ENV': JSON.stringify(
-      isPrd ? 'production' : 'development'
+      isPrd ? 'production' : 'development',
     ),
   }),
 ];
@@ -27,14 +27,14 @@ if (isPrd) {
   plugins.push(
     dev({
       dirs: ['dist'],
-    })
+    }),
   );
 }
 
 plugins.push(
   html({
     title: 'React TS SPA',
-  })
+  }),
 );
 
 export default {
