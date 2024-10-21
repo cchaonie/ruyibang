@@ -1,5 +1,5 @@
 import { hydrateRoot } from 'react-dom/client';
-import App from 'src/application';
+import App from '..';
 
 const domNode = document.getElementById('root');
 
